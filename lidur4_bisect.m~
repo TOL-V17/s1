@@ -28,7 +28,8 @@ sol4 = bisect(fn,2,pi,0.5e-6);
 disp(sol4);
 
 
-fplot(@(x) fn(x),[-pi pi],'b')
+x = sol;
+fplot(@(x) f(x),[-pi pi],'b')
 hold on
 
 fplot(@(y) 0, 'r')
