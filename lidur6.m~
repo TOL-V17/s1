@@ -34,6 +34,7 @@ fplot(@(x) fn(x),[-pi pi],'b')
 hold on
 
 fplot(@(y) 0, 'r')
+%ylabel('f(theta)')
 
 xlabel('theta')
 ylabel('f(theta)')
