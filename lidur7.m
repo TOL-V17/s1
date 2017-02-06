@@ -2,18 +2,36 @@ format long;
 
 val1 = 1;
 
-for p2 = 0:0.001:5
+first_iter = true;
+start_interval = 0;
+temp = 0;
+poses = 0;
+
+for p2 = 0:0.001:11
+    cnt = 0;
     for v = -pi:0.1:pi
         %disp(p2);
         %disp(v);
         theta = v;
         val = f2(v,p2);
         if val1*val < 0
-            disp(p2);
+            cnt = cnt +1; 
+            %disp(p2);
         end
-        val1 = val;
-            
+        val1 = val;  
     end
+ 
+    if poses ~= cnt
+       fprintf('The interval %f to %f has %d poses\n',start_interval,temp,poses);
+%        disp(curr);
+%        disp(temp);
+%        disp(p2);
+       start_interval = p2;
+       poses=cnt;
+    end
+    
+    temp = p2;
+ 
     %fn=@(theta) ((y2 - L2*sin(gamma + theta))*(L3^2*sin(theta)^2 + (x1 - L3*cos(theta))^2 + p1^2 - p2^2) + L3*sin(theta)*((x2 - L2*cos(gamma + theta))^2 + (y2 - L2*sin(gamma + theta))^2 + p1^2 - p3^2))^2 - p1^2*(2*(y2 - L2*sin(gamma + theta))*(x1 - L3*cos(theta)) + 2*L3*sin(theta)*(x2 - L2*cos(gamma + theta)))^2 + ((x1 - L3*cos(theta))*((x2 - L2*cos(gamma + theta))^2 + (y2 - L2*sin(gamma + theta))^2 + p1^2 - p3^2) - (x2 - L2*cos(gamma + theta))*(L3^2*sin(theta)^2 + (x1 - L3*cos(theta))^2 + p1^2 - p2^2))^2;
 end
 
