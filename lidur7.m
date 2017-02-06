@@ -22,12 +22,16 @@ for p2 = 0:0.001:11
     end
  
     if poses ~= cnt
-       fprintf('The interval %f to %f has %d poses\n',start_interval,temp,poses);
+       fprintf('The interval %.3f to %.3f has %d poses\n',start_interval,temp,poses);
 %        disp(curr);
 %        disp(temp);
 %        disp(p2);
        start_interval = p2;
        poses=cnt;
+    end
+    
+    if p2 == 11
+        fprintf('The interval %.3f to %.3f has %d poses\n',start_interval,temp,cnt);
     end
     
     temp = p2;
