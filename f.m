@@ -1,4 +1,4 @@
-function out=f2(theta)
+function out=f(theta)
     L1=2;
     L2=sqrt(2);
     L3=sqrt(2);
@@ -14,11 +14,10 @@ function out=f2(theta)
     B2 = L3*sin(theta);
     A3 = L2*cos(theta + gamma)-x2;
     B3 = L2*sin(theta + gamma)-y2;    
-    %A3 = L2*[cos(theta)*cos(gamma) - sin(theta)*sin(gamma)]-x2;
-    %B3 = L2*[cos(theta)*sin(gamma) + sin(theta)*cos(gamma)]-y2;
-    D = 2*(A2*B3 -B2*A3);
-    N1 = B3*(p2^2-p1^2-A2^2-B2^2)-B2*(p3^2-p1^2-A3^2-B3^2);
-    N2 = -A3*(p2^2-p1^2-A2^2-B2^2) + A2*(p3^2-p1^2-A3^2-B3^2);
+
+    N1 = B3.*(p2^2-p1^2-A2.^2-B2.^2) - B2.*(p3^2-p1^2-A3.^2-B3.^2);
+    N2 = -A3.*(p2^2-p1^2-A2.^2-B2.^2) + A2.*(p3^2-p1^2-A3.^2-B3.^2);
+    D = 2*(A2.*B3 - B2.*A3);
     
     
 out=N1^2+N2^2-p1^2*D^2;
