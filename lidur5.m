@@ -17,26 +17,31 @@ sol = bisect(fn,-pi,-0.5,0.5e-6);
 disp(sol);
 subplot(3,2,1);
 plot_poses(x1,x2,y2,p1,p2,p3,L2,L3,sol,gamma)
+
 %stada2
 sol2 = bisect(fn,-0.5,0,0.5e-6);
 disp(sol2);
 subplot(3,2,2);
 plot_poses(x1,x2,y2,p1,p2,p3,L2,L3,sol2,gamma)
+
 %stada3
 sol3 = bisect(fn,0,0.4,0.5e-6);
 disp(sol3);
 subplot(3,2,3);
 plot_poses(x1,x2,y2,p1,p2,p3,L2,L3,sol3,gamma)
+
 %stada4
 sol4 = bisect(fn,0.4,0.5,0.5e-6);
 disp(sol4);
 subplot(3,2,4);
 plot_poses(x1,x2,y2,p1,p2,p3,L2,L3,sol4,gamma)
+
 %stada5
 sol5 = bisect(fn,0.5,2,0.5e-6);
 disp(sol5);
 subplot(3,2,5);
 plot_poses(x1,x2,y2,p1,p2,p3,L2,L3,sol5,gamma)
+
 %stada6
 sol6 = bisect(fn,2,pi,0.5e-6);
 disp(sol6);

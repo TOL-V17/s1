@@ -18,6 +18,7 @@ sol = bisect(fn,-pi,1.5,0.5e-6);
 disp(sol);
 subplot(1,2,1);
 plot_poses(x1,x2,y2,p1,p2,p3,L2,L3,sol,gamma)
+
 %stada2
 sol2 = bisect(fn,1.5,pi,0.5e-6);
 disp(sol2);
