@@ -48,6 +48,6 @@ plot([x2 u1], [y2 v1], 'b');
 hold on
 
 xlabel('theta')
-ylabel('f(theta')
+ylabel('f(theta)')
 
 end
