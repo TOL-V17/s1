@@ -1,4 +1,4 @@
-function out = lidur3(q,x)
+function [out,counter] = lidur3(q,x)
 
 A = lidur2(q,x);
 disp(A)
@@ -7,15 +7,15 @@ disp(b)
 s = vpa(A\b);
 tol = 0.5*10^-6;
 counter = 1;
-while(1)
-    y = s+q;
-    A = lidur2(y,x);
-    b = -(vigurfall(y,x));
+error=1;
+while(error > tol)
+    qold = q;
+    q = s+q;
+    A = lidur2(q,x);
+    b = -(vigurfall(q,x));
     s = vpa(A\b);
-    if (2/3).^counter > tol
-        break
-    end
     counter = counter+1;
+    error = norm(q-qold)/norm(q);
 end
-out = s+y;
+out = s+q;
 end
