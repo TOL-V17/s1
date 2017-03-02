@@ -1,9 +1,9 @@
 function [out,counter] = lidur3(q,x)
 
 A = lidur2(q,x);
-disp(A)
+%disp(A)
 b = -(vigurfall(q,x));
-disp(b)
+%disp(b)
 s = vpa(A\b);
 tol = 0.5*10^-6;
 counter = 1;
