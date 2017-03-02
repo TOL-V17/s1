@@ -23,11 +23,5 @@ for i=1:k
         f1=f2; 
         f2=vigurfall(x2,100); % single function evaluation
     end
-    disp('a');
-    disp(a);
-    disp('b');
-    disp(b);
-    disp('y');
-    disp((a+b)/2);
 end
 y=(a+b)/2;
