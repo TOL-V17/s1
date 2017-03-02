@@ -6,6 +6,7 @@ function y=gss(a,b,k)
 g=(sqrt(5)-1)/2;
 x1 = ones(7,1).*( a+(1-g)*(b-a));
 x2 = ones(7,1).*(a+g*(b-a));
+%...
 f1=vigurfall(x1, 100);
 f2=vigurfall(x2,100);
 for i=1:k
