@@ -1,0 +1,11 @@
+g = (sqrt(5)-1)*99;
+k = log
+
+q = ones(7,1)*0.1;
+f = vigurfall(q,100);
+a = 1;
+b = 199;
+k
+y=gss(f,a,b,k);
+
+disp y;
