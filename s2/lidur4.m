@@ -7,5 +7,7 @@ q = 0.1*ones(7,1);
 BE = abs(vigurfall(q,100));
 FE = abs(b-q);
 
+disp('BE');
 disp(BE);
+disp('FE');
 disp(FE);
