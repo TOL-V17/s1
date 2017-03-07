@@ -1,5 +1,4 @@
 function [out,counter] = lidur3(q,x)
-
 A = lidur2(q,x);
 %disp(A)
 b = -(vigurfall(q,x));
@@ -17,9 +16,6 @@ while(error > tol)
     counter = counter+1;
     error = norm(q-qold)/norm(q);
 end
-o = s+q;
-for i=1:7
-    o(i,1) = vpa(round(o(i,1)*10^6)/10^6);
-end
-out = o;
+out = s+q;
+
 end

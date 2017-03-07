@@ -12,5 +12,5 @@ end;
 
 % Store the matrix. Already done before.
 % save('ResultArr')
-% disp('Nidurstodur vistadar')
+
 

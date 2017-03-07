@@ -1,8 +1,18 @@
-q = 0.1*ones(7,1);
-% v = lidur2(q, 100);
-% disp(v)
+%Problems 1-6
+%Comment out to run one problem at a time.
 
-[b,cnt] = lidur3(q,100);
-fprintf('Itrekanir: %d \n',cnt);
-fprintf('%.6f\n', b);
+%Problem 1
+run('lidur1');
+%Problem 2
+run('lidur2_lausn');
+% Problem 3
+run('lidur3_lausn');
+%Problem 4
+run('lidur4');
+%Problem 5
+run('lidur5');
+run('lidur5plot');
+%Problem 6
+run('lidur6');
+
 
